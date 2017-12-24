@@ -1,0 +1,420 @@
+<%page expression_filter="h"/>
+<%inherit file="main.html" />
+<%namespace name='static' file='static_content.html'/>
+<%!
+from django.utils.translation import ugettext as _
+from django.core.urlresolvers import reverse
+
+from openedx.core.djangolib.markup import HTML, Text
+%>
+
+
+
+
+
+    
+		<!--// Main Banner \\-->
+		<div class="education-banner">
+    <div class="Over-lay"></div>
+            <!--// Slider \\-->
+            <div class="education-banner-one">
+                <div class="education-banner-one-layer">
+                    <img src="${static.url('tetco-theme/extra-images/DevicesBusiness_Education_Money_FeaturePanel5_V3.jpg')}" alt="">
+                    <div class="education-banner-caption">
+                        <span class="education-bgcolor">تطوير اكبر منصه للتدريب الالكتروني </span>
+                        <br>
+                        <span class="education-bgcolor banner-title">رؤيتنا الوصول إلى تعلم أفضل و أكثر فعالية </span>
+                    </div>
+                    <!-- <div class="education-banner-thumb"> <img src="extra-images/banner-thumb-1.png" alt=""> </div>
+ -->                </div>
+                
+                
+            </div>
+            <!--// Slider \\-->
+            
+        </div>
+		<!--// Main Banner \\-->
+
+		<!--// Main Content \\-->
+		<div class="education-main-content">
+<!--// Main Banner \\-->
+       <div  class="education-main-content">
+           <div class="education-main-section">
+                <div id="features" class="features">
+            <div class="container">
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="feature_block_wrap">
+                        <div class="teacher">
+                            <div class="feature_block">
+                                <div class="feature_icon"><i class="fa fa-university"></i></div>
+                                <div class="feature_txt">
+                                    <h4>أفضل المدربين</h4>
+                                    <p>الحصول على التعليم المهني والتشاور موثوق بها من قبل فريقنا من المعلمين والمعلمين المعتمدين.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="feature_block_wrap">
+                        <div class="library">
+                            <div class="feature_block">
+                                <div class="feature_icon"><i class="fa fa-book"></i></div>
+                                <div class="feature_txt">
+                                    <h4>المراجع &amp; المكتبات</h4>
+                                    <p>الحصول على التعليم المهني والتشاور موثوق بها من قبل فريقنا من المعلمين والمعلمين المعتمدين.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>             
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="feature_block_wrap">
+                        <div class="courses">
+                            <div class="feature_block">
+                                <div class="feature_icon"><i class="icon-earth"></i></div>
+                                <div class="feature_txt">
+                                    <h4>دروس مباشره</h4>
+                                    <p>الحصول على التعليم المهني والتشاور موثوق بها من قبل فريقنا من المعلمين والمعلمين المعتمدين.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="feature_block_wrap">
+                        <div class="certificate">
+                            <div class="feature_block">
+                                <div class="feature_icon"><i class="fa fa-file-text"></i></div>
+                                <div class="feature_txt">
+                                    <h4>شهادة</h4>
+                                    <p>الحصول على التعليم المهني والتشاور موثوق بها من قبل فريقنا من المعلمين والمعلمين المعتمدين.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+           </div>
+       </div>
+
+			<!--// Main Section \\-->
+			<div class="education-main-section">
+				<div class="container">
+					<div class="row">
+						
+                        <!--// Services \\-->
+						<div class="col-md-12">
+                            <div class="education-fancy-title">
+                                <i class="fa fa-graduation-cap"></i>
+                                <span>ما نقدمه</span>
+                                <h2>اﻷقسام الرئيسية</h2>
+                            </div>
+                            <div class="education-service education-service-grid">
+                                <ul class="row">
+                                    <li class="col-md-3">
+                                        <div class="education-service-grid-wrap">
+                                            <i class=" icon-old-fashion-briefcase"></i>
+                                            <h5><a href="${marketing_link('ROOT')}">الاعمال</a></h5>
+                                            <p>نص يشرح هذه الخدمه</p>
+                                            <a href="${marketing_link('ROOT')}" class="education-readmore-btn">المزيد <i class="fa fa-arrow-circle-o-right Fliper"></i></a>
+                                        </div>
+                                    </li>
+                                    <li class="col-md-3">
+                                        <div class="education-service-grid-wrap">
+                                            <i class="icon-calculate"></i>
+                                            <h5><a href="${marketing_link('ROOT')}">اقتصاديات</a></h5>
+                                            <p>نص يشرح هذه الخدمه</p>
+                                            <a href="${marketing_link('ROOT')}" class="education-readmore-btn">المزيد <i class="fa fa-arrow-circle-o-right Fliper"></i></a>
+                                        </div>
+                                    </li>
+                                    <li class="col-md-3">
+                                        <div class="education-service-grid-wrap">
+                                            <i class="icon-flask-outline"></i>
+                                            <h5><a href="${marketing_link('ROOT')}">العلوم</a></h5>
+                                            <p>نص يشرح هذه الخدمه</p>
+                                            <a href="${marketing_link('ROOT')}" class="education-readmore-btn ">المزيد <i class="fa fa-arrow-circle-o-right Fliper"></i></a>
+                                        </div>
+                                    </li>
+                                    <li class="col-md-3">
+                                        <div class="education-service-grid-wrap">
+                                            <i class="icon-calculate"></i>
+                                            <h5><a href="${marketing_link('ROOT')}">البرمجه</a></h5>
+                                            <p>نص يشرح هذه الخدمه</p>
+                                            <a href="${marketing_link('ROOT')}" class="education-readmore-btn">المزيد <i class="fa fa-arrow-circle-o-right Fliper"></i></a>
+                                        </div>
+                                    </li>
+                                    <li class="col-md-3">
+                                        <div class="education-service-grid-wrap">
+                                            <i class="icon-pencil-and-ruler-cross-of-school-materials"></i>
+                                            <h5><a href="${marketing_link('ROOT')}">رياضيات</a></h5>
+                                            <p>نص يشرح هذه الخدمه</p>
+                                            <a href="${marketing_link('ROOT')}" class="education-readmore-btn">المزيد <i class="fa fa-arrow-circle-o-right Fliper"></i></a>
+                                        </div>
+                                    </li>
+                                    <li class="col-md-3">
+                                        <div class="education-service-grid-wrap">
+                                            <i class="icon-computer-mouse"></i>
+                                            <h5><a href="${marketing_link('ROOT')}">تصميم</a></h5>
+                                            <p>نص يشرح هذه الخدمه</p>
+                                            <a href="${marketing_link('ROOT')}" class="education-readmore-btn">المزيد <i class="fa fa-arrow-circle-o-right Fliper"></i></a>
+                                        </div>
+                                    </li>
+                                    <li class="col-md-3">
+                                        <div class="education-service-grid-wrap">
+                                            <i class="icon-molecule"></i>
+                                            <h5><a href="${marketing_link('ROOT')}">الأحياء</a></h5>
+                                            <p>نص يشرح هذه الخدمه</p>
+                                            <a href="${marketing_link('ROOT')}" class="education-readmore-btn">المزيد <i class="fa fa-arrow-circle-o-right Fliper"></i></a>
+                                        </div>
+                                    </li>
+                                    <li class="col-md-3">
+                                        <div class="education-service-grid-wrap">
+                                            <i class=" icon-laptop2"></i>
+                                            <h5><a href="${marketing_link('ROOT')}">محاسبه</a></h5>
+                                           <p>نص يشرح هذه الخدمه</p>
+                                            <a href="${marketing_link('ROOT')}" class="education-readmore-btn">المزيد <i class="fa fa-arrow-circle-o-right Fliper"></i></a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!--// Services \\-->
+
+					</div>
+				</div>
+			</div>
+			<!--// Main Section \\-->
+
+             <!--// Main Section \\-->
+            <div class="education-main-section education-counter-img">
+                <span class="counter-transparent"></span>
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-md-12">
+                            <div class="education-counter">
+                                <ul class="row">
+                                    <li class="col-md-3">
+                                        <i class="icon-old-fashion-briefcase"></i>
+                                        <h4 id="word-count1">320</h4>
+                                        <span>الدورات</span>
+                                    </li>
+                                    <li class="col-md-3">
+                                        <i class=" icon-people3"></i>
+                                        <h4 id="word-count2">1140</h4>
+                                        <span>طلابنا</span>
+                                    </li>
+                                    <li class="col-md-3">
+                                        <i class=" icon-bell"></i>
+                                        <h4 id="word-count3">847</h4>
+                                        <span>افضل الاساتذه</span>
+                                    </li>
+                                    <li class="col-md-3">
+                                        <i class="icon-earth"></i>
+                                        <h4 id="word-count4">2150</h4>
+                                        <span>المتابعين</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!--// Main Section \\-->
+
+            <!--// Main Section \\-->
+                     <%include file="${courses_list}" />
+            <!--// Main Section \\-->
+
+           
+        
+    
+            <!--// Main Section \\-->
+
+              <!--// Main Section \\-->
+            <div class="education-main-section education-testimonial-full">
+                <span class="education-shape-one"></span>
+                <span class="education-shape-two"></span>
+                <span class="testimonial-transparent"></span>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-10 col-sm-offset-1 testimonial-list">
+                        <div role="tabpanel">
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane fade in active" id="tab1">
+                                    <div class="testimonial-image">
+                                        <img src="${static.url('tetco-theme/extra-images/team-detail-img3.jpg')}" alt="t1">
+                                    </div>
+                                    <div class="testimonial-text">
+                                        <p>
+                                            "هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر أو الكلمات العشوائية إلى النص. إن كنت تريد أن تستخدم نص لوريم إيبسوم ما، عليك أن تتحقق أولاً أن ليس هناك أي كلمات أو عبارات محرجة أو غير لائقة مخبأة في هذا النص. "<br>
+                                            <a href="#">د/ حمزه احمد</a>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div role="tabpanel" class="tab-pane fade" id="tab2">
+                                    <div class="testimonial-image">
+                                        <img src="${static.url('tetco-theme/extra-images/team-detail-img3.jpg')}" alt="t2">
+                                    </div>
+                                    <div class="testimonial-text">
+                                        <p>
+                                            "هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر أو الكلمات العشوائية إلى النص. إن كنت تريد أن تستخدم نص لوريم إيبسوم ما، عليك أن تتحقق أولاً أن ليس هناك أي كلمات أو عبارات محرجة أو غير لائقة مخبأة في هذا النص."<br>
+                                            <a href="#">د/ حمزه احمد</a>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div role="tabpanel" class="tab-pane fade" id="tab3">
+                                    <div class="testimonial-image">
+                                        <img src="${static.url('tetco-theme/extra-images/team-detail-img3.jpg')}" alt="t3">
+                                    </div>
+                                    <div class="testimonial-text">
+                                        <p>
+                                            "هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر أو الكلمات العشوائية إلى النص. إن كنت تريد أن تستخدم نص لوريم إيبسوم ما، عليك أن تتحقق أولاً أن ليس هناك أي كلمات أو عبارات محرجة أو غير لائقة مخبأة في هذا النص. "<br>
+                                            <a href="#">د/ حمزه احمد</a>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div role="tabpanel" class="tab-pane fade" id="tab4">
+                                    <div class="testimonial-image">
+                                        <img src="${static.url('tetco-theme/extra-images/team-detail-img3.jpg')}" alt="t4">
+                                    </div>
+                                    <div class="testimonial-text">
+                                        <p>
+                                            "هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر أو الكلمات العشوائية إلى النص. إن كنت تريد أن تستخدم نص لوريم إيبسوم ما، عليك أن تتحقق أولاً أن ليس هناك أي كلمات أو عبارات محرجة أو غير لائقة مخبأة في هذا النص."<br>
+                                            <a href="#">د/ حمزه احمد</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#tab1" aria-controls="tab1" role="tab" data-toggle="tab"></a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#tab2" aria-controls="tab2" role="tab" data-toggle="tab"></a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#tab3" aria-controls="tab3" role="tab" data-toggle="tab"></a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#tab4" aria-controls="tab4" role="tab" data-toggle="tab"></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <!--// Main Section \\-->
+
+            <!--// Main Section \\-->
+            <div class="education-main-section education-partner-full">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="education-fancy-title">
+                                <i class="fa fa-graduation-cap"></i>
+                                <span>شركاؤنا المتميزون</span>
+                                <h2>شركاؤنا</h2>
+                            </div>
+                            <div class="education-partner">
+                                <ul>
+                                    <li><a href="#"><img src="${static.url('tetco-theme/extra-images/partner-img-1.jpg')}" alt=""></a></li>
+                                    <li><a href="#"><img src="${static.url('tetco-theme/extra-images/partner-img-2.jpg')}" alt=""></a></li>
+                                    <li><a href="#"><img src="${static.url('tetco-theme/extra-images/partner-img-3.jpg')}" alt=""></a></li>
+                                    <li><a href="#"><img src="${static.url('tetco-theme/extra-images/partner-img-4.jpg')}" alt=""></a></li>
+                                    <li><a href="#"><img src="${static.url('tetco-theme/extra-images/partner-img-3.jpg')}" alt=""></a></li>
+                                    <li><a href="#"><img src="${static.url('tetco-theme/extra-images/partner-img-4.jpg')}" alt=""></a></li>
+                                    <li><a href="#"><img src="${static.url('tetco-theme/extra-images/partner-img-1.jpg')}" alt=""></a></li>
+                                    <li><a href="#"><img src="${static.url('tetco-theme/extra-images/partner-img-2.jpg')}" alt=""></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--// Main Section \\-->
+
+            <!--// Main Section \\-->
+            <div class="education-main-section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="education-subscribe-newsletter">
+                                <img src="${static.url('tetco-theme/extra-images/caleb-woods-275754.jpg')}" style="width: 100%;" alt="">
+                                <div class="education-newslatter-text">
+                                    <h2>اشترك في نشرتنا الإخبارية</h2>
+                                    <p>لوريم إيبسوم دولور سيت أميت، كونسكتيتور أديبيسشينغ إليت. بريسنت فيوجيات إيبسوم مكسيموس ماليسوادا. دونيك، ليس، إكس، فوسيبوس، فرينجيلا، تيلوس، إغيت، مكسيموس، أركو. دويس إت إيروس نيسل.</p>
+                               <form>
+                                        <input id="part1" style="font:normal 300 1rem/1.6rem Georgia,Cambria,'Times New Roman',Times,serif; font-size: 16px;font-family: DroidKufi;     margin-left: 25px; height: 43px;" type="text" value="أكتب هنا" onblur="if(this.value == '') { this.value ='أكتب هنا'; }" onfocus="if(this.value =='أكتب هنا') { this.value = ''; }">
+                                        <label><input id="part2" type="button" value="اشترك الآن"></label>
+                                   </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+            <!--// Main Section \\-->
+
+		</div>
+		<!--// Main Content \\-->
+<!-- popupModal -->
+ <!--    <div class="loginmodal modal fade" id="part3" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="education-login-box">
+                <a href="#" data-dismiss="modal" class="education-login-close"><i class="icon-uniF106"></i></a>
+                <h4>لقد تم الاشتراك بنجاح</h4>
+             
+             
+            </div>
+        <div class="clearfix"></div>
+        </div>
+    </div> -->
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog subscribeModel">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        
+      </div>
+      <div class="modal-body text-center">
+        <img style="width: 150px;" src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTI7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iNTEycHgiIGhlaWdodD0iNTEycHgiPgo8cG9seWdvbiBzdHlsZT0iZmlsbDojRjJGMkYyOyIgcG9pbnRzPSI1MTIsMjU1Ljk5NSA0NjcuMjQzLDMwNC4yNCA0ODYuNjg4LDM2Ny4xMiA0MjUuMzY1LDM5MS4wNTYgNDE1LjYxNiw0NTYuMTY1ICAgMzQ5Ljk5NSw0NTEuMjI3IDMxMi45Niw1MDUuNjI3IDI1Niw0NzIuNjI0IDE5OS4wMjksNTA1LjYyNyAxNjEuOTk1LDQ1MS4yMjcgOTYuMzYzLDQ1Ni4xNDQgODYuNjI0LDM5MS4wNDUgMjUuMzEyLDM2Ny4wOTkgICA0NC43NjgsMzA0LjIyOSAwLDI1NS45OTUgNDQuNzY4LDIwNy43NiAyNS4zMTIsMTQ0Ljg5MSA4Ni42MzUsMTIwLjkzMyA5Ni4zODQsNTUuODM1IDE2Mi4wMDUsNjAuNzczIDE5OS4wNCw2LjM3MyAyNTYsMzkuMzc2ICAgMzEyLjk3MSw2LjM3MyAzNTAuMDA1LDYwLjc4NCA0MTUuNjM3LDU1Ljg1NiA0MjUuMzc2LDEyMC45NTUgNDg2LjY4OCwxNDQuODkxIDQ2Ny4yNDMsMjA3Ljc3MSAiLz4KPHBhdGggc3R5bGU9ImZpbGw6IzRDREJDNDsiIGQ9Ik0zNDkuNzA3LDE5MS4zNDRMMzQ5LjcwNywxOTEuMzQ0Yy00LjAyMS01Ljg3Ny0xMi4wODUtNy4yMTEtMTcuODU2LTMuMDI5ICBjLTQwLjczNiwyOS40OTMtNzYuMzg0LDY0Ljk4MS0xMDYuMjE5LDEwNS43ODFsLTQ0LjA4NS00NC4wODVjLTQuOTA3LTQuOTE3LTEyLjg2NC00LjkxNy0xNy43ODEsMGwwLDAgIGMtNC45MDcsNC45MTctNC45MDcsMTIuODc1LDAsMTcuNzkybDU0LjYxMyw1NC42MDNjNS41NjgsNS41NjgsMTQuODI3LDQuNzI1LDE5LjI3NS0xLjc3MSAgYzI5LjkyLTQzLjY5MSw2Ni41OTItODEuMzMzLDEwOS4xMDktMTEyLjA2NEMzNTIuMjU2LDIwNC42MDMsMzUzLjUzNiwxOTYuOTU1LDM0OS43MDcsMTkxLjM0NCIvPgo8cGF0aCBzdHlsZT0iZmlsbDojQ0RENkUwOyIgZD0iTTI1Niw0MjUuNTA5Yy05My4wNzcsMC0xNjguOC03NS43MjMtMTY4LjgtMTY4LjhjMC05My4wNjcsNzUuNzMzLTE2OC44LDE2OC44LTE2OC44ICBzMTY4LjgsNzUuNzQ0LDE2OC44LDE2OC44QzQyNC44LDM0OS43ODcsMzQ5LjA3Nyw0MjUuNTA5LDI1Niw0MjUuNTA5IE0yNTYsOTguNTY1Yy04Ny4yLDAtMTU4LjEzMyw3MC45MzMtMTU4LjEzMywxNTguMTMzICBTMTY4LjgsNDE0Ljg0MywyNTYsNDE0Ljg0M3MxNTguMTMzLTcwLjkzMywxNTguMTMzLTE1OC4xMzNTMzQzLjIsOTguNTY1LDI1Niw5OC41NjUiLz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==" />
+        <h2>لقد تم الاشتراك في النشره الاخباريه</2>
+      </div>
+      
+    </div>
+
+  </div>
+</div>
+
+<script type="text/javascript">
+  
+
+  
+  $("#part2").click(function(){
+  	var lang = $("#part1").val();
+  if(lang=="أكتب هنا")
+  {
+    return false;
+
+  }
+  else{
+    // return "hello";
+    $("#part1").value="أكتب هنا";
+    $("#myModal").modal('show');
+
+  }
+  });
+
+
+</script>

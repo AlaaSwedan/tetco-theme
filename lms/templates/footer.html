@@ -1,0 +1,132 @@
+## mako
+<%page expression_filter="h"/>
+<%!
+  from django.core.urlresolvers import reverse
+  from django.utils.translation import ugettext as _
+  from branding.api import get_footer
+  from openedx.core.djangoapps.lang_pref.api import footer_language_selector_is_enabled
+%>
+<% footer = get_footer(is_secure=is_secure) %>
+<%namespace name='static' file='static_content.html'/>
+
+
+        <!--// Footer \\-->
+        <footer id="education-footer" class="education-footer-two">
+            
+            <!--// Footer Widget \\-->
+            <div class="education-footer-widget">
+                <div class="container">
+                    <div class="row">
+                          <!--// Widget Featured Courses \\-->
+                        <aside class="col-md-4 widget widget_featured_courses">
+                            <a href="${marketing_link('ROOT')}" class="education-logo"><img src="${static.url('tetco-theme/images/logo.png')}" alt=""></a>
+                            <p style="color: #ddd;">جاء تأسيس شركة تطوير لتقنيات التعليم بعد أن درست شركة تطوير التعليم القابضة بالتعاون مع وزارة التعليم جدوى تأسيسها؛ لتساند الوزارة في القيام بوظائف تقنية المعلومات التابعة للوزارة وتوفر حلولًا وخدمات ذات جودة عالية لكلا القطاعين العام والخاص مع تطوير خدمات التقنية والاتصالات في مجال التعليم العام في المملكة لرفع مستوى هذا القطاع حتى يواكب النمو المستقبلي على الصعيدين المحلي والدولي.</p>
+                        </aside>
+                        <!--// Widget Featured Courses \\-->
+                        <!--// Widget Contact Info \\-->
+                        <aside class="col-md-4 widget widget_contact_info">
+                           
+                            <ul>
+                                <li><i class="education-color fa fa-home"></i>  الرياض - السعودية </li>
+                                <li><i class="education-color fa fa-phone"></i> 920000438 </li>
+                                <li><i class="education-color fa fa-envelope"></i> <a href="mailto:name@email.com"> info@tetco.sa </a></li>
+                            </ul>
+                        </aside>
+                        <!--// Widget Contact Info \\-->
+                      
+                        <!--// Widget Gallery \\-->
+                        <aside class="col-md-4 widget widget_gallery">
+                            <div class="education-footer-title"> <h4>وسائل الدفع</h4> </div>
+                            <ul>
+                                <li><a data-fancybox-group="group" href="images/bank-transfer.png" class="fancybox"><img src="${static.url('tetco-theme/images/bank-transfer.png')}" alt=""></a></li>
+                                <li><a data-fancybox-group="group" href="images/paypal.png" class="fancybox"><img src="${static.url('tetco-theme/images/paypal.png')}" alt=""></a></li>
+                                <li><a data-fancybox-group="group" href="images/western-union.png" class="fancybox"><img src="${static.url('tetco-theme/images/western-union.png')}" alt=""></a></li>
+                                
+                            </ul>
+                        </aside>
+                       
+
+                        <!--// Widget Gallery \\-->
+                    </div>
+                </div>
+            </div>
+            <!--// Footer Widget \\-->
+
+            <!--// CopyRight \\-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="education-copyright">
+                            <p>© 2017, All Right Reserved - by <a href="http://edeltasoft.com" target="blank">Delta soft</a></p>
+                            <ul>
+                                <li><a href="#">الخصوصيه</a></li>
+                                <li><a href="#">الشروط</a></li>
+                                <li><a href="#">موقعنا</a></li>
+                                
+                            </ul>
+                            <a href="#" class="education-back-top"><i class="fa fa-angle-up"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--// CopyRight \\-->
+
+        </footer>
+        <!--// Footer \\-->
+
+  <div class="clearfix"></div>
+   
+    <!--// Main Wrapper \\-->
+
+    <!-- LoginModal -->
+    <div class="loginmodal modal fade" id="loginModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="education-login-box">
+                <a href="#" data-dismiss="modal" class="education-login-close"><i class="icon-uniF106"></i></a>
+                <h4>الدخول</h4>
+                <form>
+                    <input type="text" value="البريد الالكتروني" onblur="if(this.value == '') { this.value ='البريد الالكتروني'; }" onfocus="if(this.value =='البريد الالكتروني*') { this.value = ''; }">
+                    <input type="password" value="كلمة المرور" onblur="if(this.value == '') { this.value ='كلمة المرور'; }" onfocus="if(this.value =='كلمة المرور') { this.value = ''; }">
+                    <a href="#">نسيت كلمة المرور؟</a>
+                    <div class="clearfix"></div>
+                    <label><input type="submit" value="الدخول"></label>
+                </form>
+                <h4>أو عن طريق مواقع التواصل الاجتماعي</h4>
+                <ul class="login-network">
+                    <li><a href="#"><i class="fa fa-facebook-square"></i> Facebook</a></li>
+                    <li class="education-twitter"><a href="#"><i class="fa fa-twitter-square"></i> Twitter</a></li>
+                    <li class="education-google-plus"><a href="#"><i class="fa fa-google-plus-square"></i> Google+</a></li>
+                </ul>
+                <p>لا تملكون حسابا حتى الآن؟ <a href="#" class="education-color">الاشتراك</a></p>
+            </div>
+        <div class="clearfix"></div>
+        </div>
+    </div>
+
+    <!-- SignupModal -->
+    <div class="loginmodal modal fade" id="signupModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="education-login-box">
+                <a href="#" data-dismiss="modal" class="education-login-close education-color"><i class="icon-uniF106"></i></a>
+                <h4>اشتركوا الآن</h4>
+                <form>
+                    <input type="text" value="الاسم بالكامل" onblur="if(this.value == '') { this.value ='الاسم بالكامل'; }" onfocus="if(this.value =='الاسم بالكامل') { this.value = ''; }">
+                    <input type="text" value="اسم المستخدم" onblur="if(this.value == '') { this.value ='اسم المستخدم'; }" onfocus="if(this.value =='اسم المستخدم') { this.value = ''; }">
+                    <input type="text" value="البريد الالكتروني" onblur="if(this.value == '') { this.value ='البريد الالكتروني'; }" onfocus="if(this.value =='البريد الالكتروني') { this.value = ''; }">
+                    <input type="text" value="كلمة المرور" onblur="if(this.value == '') { this.value ='Type your password*'; }" onfocus="if(this.value =='Type your password*') { this.value = ''; }">
+                    
+                   
+                    <div class="clearfix"></div>
+                    <label><input type="submit" value="اشترك الآن"></label>
+                </form>
+                <h4>أو عن طريق مواقع التواصل الاجتماعي</h4>
+                <ul class="login-network">
+                    <li><a href="#"><i class="fa fa-facebook-square"></i> Facebook</a></li>
+                    <li class="education-twitter"><a href="#"><i class="fa fa-twitter-square"></i> Twitter</a></li>
+                    <li class="education-google-plus"><a href="#"><i class="fa fa-google-plus-square"></i> Google+</a></li>
+                </ul>
+               
+            </div>
+        <div class="clearfix"></div>
+        </div>
+    </div>

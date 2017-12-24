@@ -1,0 +1,226 @@
+{% extends "wiki/base.html" %}
+{% load wiki_tags i18n %}
+
+{% block pagetitle %}{{ article.current_revision.title }}{% endblock %}
+
+{% block wiki_breadcrumbs %}
+{% include "wiki/includes/breadcrumbs.html" %}
+{% endblock %}
+
+{% block wiki_contents %}
+
+<style type="text/css">
+*{
+  font-family: DroidKufi;
+}
+.widget_featured_courses p{
+  font-family: DroidKufi;
+      padding-right: 25px;
+}
+.education-copyright ul{
+  margin:0;
+  padding-right: 25px !important;
+}
+   .container>div{
+      display: block !important;
+      table-layout: fixed !important;
+      border: none !important;
+      background: none !important;
+      box-shadow: none !important;
+  }
+  html, button, input, select, textarea, form#wiki_revision .CodeMirror{
+    font-family: DroidKufi !important;
+    direction: rtl;
+    text-align: right;
+  }
+html{
+      margin: 0;
+    padding: 0;
+    margin-top: -20px;
+}
+  div.info-wrapper section.handouts .handouts-header{
+    font-family: DroidKufi !important;
+  }
+  .handouts a{
+    font-family: DroidKufi !important;
+  }
+.course-tabs{
+      display: inline-flex;
+    width: 70%;
+    padding-top: 15px !important;
+}
+.course-tabs li a{
+  font-family: DroidKufi !important;
+}
+body.view-in-course .container {
+    /* max-width: none; */
+    min-width: initial;
+    width: auto;
+}
+.education-logo{
+      padding-right: 25px;
+}
+.education-top-strip ul,.education-top-strip ol{
+  margin: 0 !important;
+}
+.education-top-strip ul li a,.education-top-strip ol li a
+{
+  font-family: DroidKufi;
+}
+div.info-wrapper section.updates div article .date{
+      padding-left: 19px;
+    float: right;
+}
+.add-article-btn{
+  background: transparent !important;
+  font-family: DroidKufi !important;
+}
+.col-lg-12,.col-lg-11,.col-lg-10,.col-lg-9,.col-lg-8,.col-lg-7,.col-lg-6,.col-lg-5,.col-lg-4,.col-lg-3,.col-lg-2,.col-lg-1,.col-md-12,.col-md-11,.col-md-10,.col-md-9,.col-md-8,.col-md-7,.col-md-6,.col-md-5,.col-md-4,.col-md-3,.col-md-2,.col-md-1,.col-sm-12,.col-sm-11,.col-sm-10,.col-sm-9,.col-sm-8,.col-sm-7,.col-sm-6,.col-sm-5,.col-sm-4,.col-sm-3,.col-sm-2,.col-sm-1,.col-xs-12,.col-xs-11,.col-xs-10,.col-xs-9,.col-xs-8,.col-xs-7,.col-xs-6,.col-xs-5,.col-xs-4,.col-xs-3,.col-xs-2,.col-xs-1{
+float: right !important;
+}
+body.view-in-course .wrapper-course-material .course-material .course-tabs{
+  float: right;
+  text-align: right;
+}
+.education-top-strip ul, .education-top-strip ol{
+  float: left;
+}
+.wiki-wrapper section.wiki .breadcrumbs-header {
+    height: 68px;
+    padding: 24px 0 26px;
+    border-bottom: 1px solid #c8c8c8;
+    border-radius: 3px 3px 0 0;
+    background-color: #f6f6f6;
+}
+.wiki-wrapper section.wiki .main-article{
+  float: right;
+  text-align: right !important;
+}
+.wiki-wrapper section.wiki.view .main-article h3{
+  text-align: right !important;
+}
+body, h1, h2, h3, h4, h5, h6, p, label{
+  text-align: right;
+}
+.article-functions ul li a{
+  text-align: right;
+}
+section.wiki .nav-tabs li.active a {
+    color: #0fb9bb !important;
+    /* font-weight: bold; */
+    background-color: transparent !important;
+    border-color: transparent !important;
+    border-left: 4px solid transparent !important;
+}
+.wiki-wrapper section.wiki .nav-tabs a {
+    display: block;
+    padding: 2px 15px !important;
+    border-radius: 3px;
+    font-size: 0.9em;
+    line-height: 25px;
+    color: #0fb9bb !important;
+}
+.nav-tabs{
+  border-bottom: 1px solid #ddd0 !important;
+}
+.nav-tabs > li {
+    float: right !important ;
+    margin-bottom: -1px;
+}
+.wiki-wrapper section.wiki .article-functions {
+    float: left;
+    width: 23.72881%;
+    padding: 12px 29px;
+    box-sizing: border-box;
+    border: 1px solid #eee;
+    margin-top: 10px;
+}
+.widget_contact_info ul li {
+    float: left;
+    width: 80%;
+    list-style: none;
+    padding-right: 65px;
+    position: relative;
+    margin-bottom: 30px;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 1.4;
+}
+.widget_contact_info ul li i {
+    position: absolute;
+    right: 0px;
+    top: 1px;
+    width: 40px;
+    height: 40px;
+    background-color: #589abf;
+    text-align: center;
+    font-size: 17px;
+    padding-top: 12px;
+}
+.education-footer-title h4 {
+    font-weight: bold;
+    margin-bottom: 0px;
+    color: #ffffff;
+    padding-right: 45px;
+}
+.education-footer-title:before {
+    content: '';
+    position: absolute;
+    right: 0px;
+    top: 14px;
+    width: 35px;
+    height: 1px;
+    background-color: #ffffff;
+}
+.education-footer-title:after {
+    content: '';
+    position: absolute;
+    right: 0px;
+    top: 11px;
+    width: 7px;
+    height: 7px;
+    border-radius: 100%;
+    background-color: #ffffff;
+}
+.navbar-nav > li {
+    float: right !important;
+}
+</style>
+
+  <div class="article-wrapper">
+
+    <article class="main-article" id="main-article">
+        {% if selected_tab != "edit" %}
+          <h3 class="entry-title">{{ article.current_revision.title }}</h3>
+
+        {% endif %}
+
+        {% block wiki_contents_tab %}
+        {% wiki_render article %}
+        {% endblock %}
+    </article>
+
+    <div class="article-functions">
+      <ul class="nav nav-tabs">
+        {% include "wiki/includes/article_menu.html" %}
+      </ul>
+      <div class="timestamp">
+        <span class="label">{% trans "Last modified:" %}</span><br />
+        <span class="date">{{ article.current_revision.modified }}</span>
+      </div>
+
+      {% if urlpath %}
+      <div class="see-children">
+        <a href="{% url 'wiki:dir' path=urlpath.path %}">{% trans "See all children" %}</a>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+
+
+
+{% endblock %}
+
+{% block footer_prepend %}
+  <p><em>{% trans "This article was last modified:" %} {{ article.current_revision.modified }}</em></p>
+{% endblock %}
